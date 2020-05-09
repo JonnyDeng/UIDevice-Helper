@@ -37,4 +37,46 @@ static NSString *iPhone11pMax = @"iPhone 11 Pro Max";
 
 @property (nonatomic, readonly, strong) NSString *iphoneType;
 
+/**
+ *  Check if the current device is an iPad
+ *
+ *  @return Returns YES if it's an iPad, NO if not
+ */
++ (BOOL)isiPad;
+
+/**
+ *  Check if the current device is an iPhone
+ *
+ *  @return Returns YES if it's an iPhone, NO if not
+ */
++ (BOOL)isiPhone;
+
+/**
+ *  Check if the current device is an iPod
+ *
+ *  @return Returns YES if it's an iPod, NO if not
+ */
++ (BOOL)isiPod;
+
+/**
+ *  Check if the current device is an Apple TV
+ *
+ *  @return Returns YES if it's an Apple TV, NO if not
+ */
++ (BOOL)isAppleTV;
+
+/**
+ *  Check if the current device is an Apple Watch
+ *
+ *  @return Returns YES if it's an Apple Watch, NO if not
+ */
++ (BOOL)isAppleWatch;
+
+/**
+ *  Check if the current device is the simulator
+ *
+ *  @return Returns YES if it's the simulator, NO if not
+ */
++ (BOOL)isSimulator;
+
 @end
