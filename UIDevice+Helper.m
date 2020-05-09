@@ -153,7 +153,10 @@
 }
 
 +(BOOL)isiPad {
-    if ([[[self devicePlatform] substringToIndex:4] isEqualToString:@"iPad"]) {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *platform = [NSString stringWithCString: systemInfo.machine encoding:NSASCIIStringEncoding];
+    if ([[platform substringToIndex:4] isEqualToString:@"iPad"]) {
         return YES;
     } else {
         return NO;
@@ -161,7 +164,10 @@
 }
 
 +(BOOL)isiPhone {
-    if ([[[self devicePlatform] substringToIndex:6] isEqualToString:@"iPhone"]) {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *platform = [NSString stringWithCString: systemInfo.machine encoding:NSASCIIStringEncoding];
+    if ([[platform substringToIndex:6] isEqualToString:@"iPhone"]) {
         return YES;
     } else {
         return NO;
@@ -169,7 +175,10 @@
 }
 
 +(BOOL)isiPod {
-    if ([[[self devicePlatform] substringToIndex:4] isEqualToString:@"iPod"]) {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *platform = [NSString stringWithCString: systemInfo.machine encoding:NSASCIIStringEncoding];
+    if ([[platform substringToIndex:4] isEqualToString:@"iPod"]) {
         return YES;
     } else {
         return NO;
@@ -177,7 +186,10 @@
 }
 
 +(BOOL)isAppleTV {
-    if ([[[self devicePlatform] substringToIndex:7] isEqualToString:@"AppleTV"]) {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *platform = [NSString stringWithCString: systemInfo.machine encoding:NSASCIIStringEncoding];
+    if ([[platform substringToIndex:7] isEqualToString:@"AppleTV"]) {
         return YES;
     } else {
         return NO;
@@ -185,7 +197,10 @@
 }
 
 +(BOOL)isAppleWatch {
-    if ([[[self devicePlatform] substringToIndex:5] isEqualToString:@"Watch"]) {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *platform = [NSString stringWithCString: systemInfo.machine encoding:NSASCIIStringEncoding];
+    if ([[platform substringToIndex:5] isEqualToString:@"Watch"]) {
         return YES;
     } else {
         return NO;
@@ -193,7 +208,10 @@
 }
 
 +(BOOL)isSimulator {
-    if ([[self devicePlatform] isEqualToString:@"i386"] || [[self devicePlatform] isEqualToString:@"x86_64"]) {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *platform = [NSString stringWithCString: systemInfo.machine encoding:NSASCIIStringEncoding];
+    if ([platform isEqualToString:@"i386"] || [[self devicePlatform] isEqualToString:@"x86_64"]) {
         return YES;
     } else {
         return NO;
