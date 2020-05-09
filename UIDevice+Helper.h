@@ -26,6 +26,12 @@ static NSString *iPhone7p = @"iPhone 7 Plus";
 static NSString *iPhone8 = @"iPhone 8";
 static NSString *iPhone8p = @"iPhone 8 Plus";
 static NSString *iPhoneX = @"iPhone X";
+static NSString *iPhoneXs = @"iPhone XS";
+static NSString *iPhoneXsMax = @"iPhone XS Max";
+static NSString *iPhoneXr = @"iPhone XR";
+static NSString *iPhone11 = @"iPhone 11";
+static NSString *iPhone11p = @"iPhone 11 Pro";
+static NSString *iPhone11pMax = @"iPhone 11 Pro Max";
 
 @interface UIDevice (Helper)
 
